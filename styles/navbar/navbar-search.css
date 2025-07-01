@@ -1,0 +1,122 @@
+.navbar-search {
+  @apply relative;
+  @apply hidden;
+  @apply md:block;
+}
+
+.navbar-search__label {
+  @apply text-black/50;
+  @apply dark:text-white/90;
+}
+
+.navbar-search__input {
+  @apply bg-transparent;
+  @apply text-black/90;
+  @apply dark:text-white/90;
+  @apply placeholder:text-default-700/50;
+  @apply dark:placeholder:text-white/60;
+  @apply w-full;
+  @apply h-6;
+  @apply flex;
+  @apply items-center;
+  @apply text-center;
+  @apply pl-2;
+  @apply pr-2;
+  @apply border-none;
+  @apply outline-none;
+}
+
+.navbar-search__inner-wrapper {
+  @apply bg-transparent;
+}
+
+.navbar-search__input-wrapper {
+  @apply bg-default-200/50;
+  @apply dark:bg-default/60;
+  @apply backdrop-blur-xl;
+  @apply backdrop-saturate-200;
+  @apply hover:bg-default-200/70;
+  @apply dark:hover:bg-default/70;
+  @apply group-data-[focus=true]:bg-white;
+  @apply dark:group-data-[focus=true]:bg-white;
+  @apply !cursor-text;
+}
+
+.navbar-search__dropdown {
+  @apply absolute;
+  @apply left-0;
+  @apply z-50;
+  @apply w-full;
+  @apply mt-2;
+  @apply bg-white;
+  @apply dark:bg-default-900;
+  @apply rounded-lg;
+  @apply shadow-lg;
+  @apply border;
+  @apply border-default-200;
+  @apply max-h-80;
+  @apply overflow-auto;
+}
+
+.navbar-search__searching {
+  @apply flex;
+  @apply flex-col;
+  @apply p-4;
+  @apply text-center;
+  @apply text-black/60;
+  @apply dark:text-white/70;
+}
+
+.navbar-search__results {
+  @apply list-none;
+  @apply m-0;
+  @apply p-0;
+}
+
+.navbar-search__result {
+  @apply border-b;
+  @apply last:border-none;
+  @apply border-default-100;
+}
+
+.navbar-search__result-link {
+  @apply block;
+  @apply px-4;
+  @apply py-3;
+  @apply hover:bg-default-200/40;
+  @apply dark:hover:bg-default-700;
+  @apply transition;
+  @apply rounded-md;
+}
+
+.navbar-search__result-title {
+  @apply font-semibold;
+}
+
+.navbar-search__result-description {
+  @apply text-xs;
+  @apply text-default-500;
+  @apply truncate;
+}
+
+.navbar-search__see-all {
+  @apply w-full;
+  @apply text-left;
+  @apply px-4;
+  @apply py-2;
+  @apply text-blue-600;
+  @apply dark:text-blue-400;
+  @apply hover:bg-default-100;
+  @apply dark:hover:bg-default-700;
+  @apply rounded-b-lg;
+  @apply transition;
+  @apply bg-transparent;
+  @apply border-none;
+}
+
+.navbar-search__no-results {
+  @apply p-4;
+  @apply text-center;
+  @apply text-black/50;
+  @apply dark:text-white/60;
+}
