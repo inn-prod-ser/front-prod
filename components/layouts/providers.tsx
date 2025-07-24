@@ -16,25 +16,25 @@ export interface ProvidersProps {
 declare module "@react-types/shared" {
   interface RouterConfig {
     routerOptions: NonNullable<
-      Parameters<ReturnType<typeof useRouter>["push"]>[1]
+      Parameters<ReturnType<typeof useRouter>[ "push" ]>[ 1 ]
     >;
   }
 }
 
-export function Providers({ children, themeProps }: ProvidersProps) {
+export function Providers( { children, themeProps }: ProvidersProps ) {
   const router = useRouter();
   const pathname = usePathname();
-  const [queryClient] = React.useState(() => new QueryClient());
+  const [ queryClient ] = React.useState( () => new QueryClient() );
 
-  React.useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+  React.useEffect( () => {
+    window.scrollTo( 0, 0 );
+  }, [ pathname ] );
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <NextUIProvider navigate={router.push}>
-        <NextThemesProvider {...themeProps}>
-          <ClerkProvider>{children}</ClerkProvider>
+    <QueryClientProvider client={ queryClient }>
+      <NextUIProvider navigate={ router.push }>
+        <NextThemesProvider { ...themeProps }>
+          <ClerkProvider publishableKey="pk_test_bGlnaHQtZ2hvdWwtOC5jbGVyay5hY2NvdW50cy5kZXYk">{ children }</ClerkProvider>
         </NextThemesProvider>
       </NextUIProvider>
     </QueryClientProvider>
