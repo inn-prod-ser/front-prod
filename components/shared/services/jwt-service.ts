@@ -32,7 +32,7 @@ export class JwtService {
 
   static async validateTokenWithBackend(token: string): Promise<void> {
     try {
-      const backendUrl = `${process.env.NEXT_PUBLIC_BACKEND}/api/auth/validate-token`;
+      const backendUrl = `https://backend.neurabig.com/api/auth/validate-token`;
 
       const response = await fetch(backendUrl, {
         method: "POST",

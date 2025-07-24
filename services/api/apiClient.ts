@@ -5,7 +5,7 @@ import axios, {
   InternalAxiosRequestConfig,
 } from "axios";
 
-const BASE_URL = `${process.env.NEXT_PUBLIC_BACKEND}/api`;
+const BASE_URL = `https://backend.neurabig.com/api`;
 
 const createApiClient = (): AxiosInstance => {
   const api = axios.create({

@@ -3,7 +3,7 @@ import { ISearchPublicCoursesResponse } from "@/interfaces";
 export const getServerSearchPublicCourses = async (
   term: string,
 ): Promise<ISearchPublicCoursesResponse[]> => {
-  const baseUrl = process.env.NEXT_PUBLIC_BACKEND;
+  const baseUrl = "https://backend.neurabig.com/api";
 
   if (!baseUrl) return [];
 
